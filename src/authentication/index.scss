@@ -1,0 +1,9 @@
+.managent-form {
+    max-width: 450px;
+    input[type="text"],
+    input[type="password"] {
+        &:focus {
+            outline: none;
+        }
+    }
+}
