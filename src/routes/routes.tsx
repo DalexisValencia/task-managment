@@ -1,9 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import Login from '../authentication/Login';
-import Register from '../authentication/Register'
+import Login from '../auth/pages/Login';
+import Register from '../auth/pages/Register'
 import NotFound from '../errors/NotFound';
 import Layout from '../layouts/layout';
+import Dashboard from '../dashboard/pages/Dashboard';
 
 export const router = createBrowserRouter([
     {
@@ -11,7 +12,10 @@ export const router = createBrowserRouter([
         element: <Layout />,
         errorElement: <NotFound />,
         children: [
-
+            {
+                path: "/dashboard",
+                element: <Dashboard />,
+            },
         ],
     },
     {
