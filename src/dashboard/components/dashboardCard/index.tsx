@@ -1,29 +1,38 @@
-import type { DashboardCard } from "../../interfaces/dashboardcard";
+import type { DashboardCardInterface } from "../../interfaces/dashboardcardInterface";
 
-const DashboardCard = (dashboard: DashboardCard) => {
+const DashboardCard = (dashboard: DashboardCardInterface) => {
+    const {
+        title,
+        dueDate,
+        comments,
+        responsibles,
+        status,
+        tasks
+    } = dashboard;
+
     return (
         <div>
-            <h2>{dashboard.title}</h2>
+            <h2>{title}</h2>
             <div>
                 <span>
-                    Due Date: {dashboard.dueDate}
+                    Due Date: {dueDate}
                 </span>
                 <span>
-                    tasks: {dashboard.tasks.length}
+                    tasks: {tasks.length}
                 </span>
 
                 <p>
-                    comments: {dashboard.comments}
+                    comments: {comments}
                 </p>
 
                 <div>
                     <div>
-                        developers: {dashboard.responsibles.map((user) => (
+                        developers: {responsibles.map((user) => (
                             <span key={user.email}>{user.name}</span>
                         ))}
                     </div>
                     <span>
-                        status: {dashboard.status}
+                        status: {status}
                     </span>
                 </div>
 

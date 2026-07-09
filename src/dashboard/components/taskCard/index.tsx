@@ -1,22 +1,23 @@
-import type { TaskCard } from "../../interfaces/taskCard";
+import type { TaskCardInterface } from "../../interfaces/taskCardInterface";
 
-const TaskCard = ({ task }: { task: TaskCard }) => {
+const TaskCard = ({ task }: { task: TaskCardInterface }) => {
+    const { title, dueDate, comments, priority, description, developer, status } = task;
     return (
         <div>
-            <h3>{task.title}</h3>
+            <h3>{title}</h3>
            <div className="flex justify-between">
-                <span>Due Date: {task.dueDate}</span>
-                <span> Comments: {task.comments}</span>
+                <span>Due Date: {dueDate}</span>
+                <span> Comments: {comments}</span>
             </div>
-            <p>Priority: {task.priority}</p>
-            <p>{task.description}</p>
+            <p>Priority: {priority}</p>
+            <p>{description}</p>
 
             <div>
                 <span>
-                    responsible {task.developer}
+                    responsible {developer}
                 </span>
                 <span>
-                    status {task.status}
+                    status {status}
                 </span>
             </div>
 

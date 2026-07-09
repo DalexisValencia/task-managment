@@ -3,7 +3,7 @@ This form handle data using uncontrolled components.
 */
 
 import { useRef } from "react"
-import '../index.scss'
+import '../../index.scss'
 import { NavLink } from "react-router-dom";
 
 function Login() {

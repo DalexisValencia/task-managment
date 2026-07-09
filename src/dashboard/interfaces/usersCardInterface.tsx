@@ -1,4 +1,4 @@
-export interface UserCard {
+export interface UserCardInterface {
     name: string;
     avatar: string;
     email: string;

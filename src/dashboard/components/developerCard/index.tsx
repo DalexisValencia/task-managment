@@ -1,12 +1,13 @@
-import type { UserCard } from "../../interfaces/usersCard";
+import type { UserCard } from "../../interfaces/usersCardInterface";
 
 const DeveloperCard = (developer: UserCard) => {
+  const { name, avatar, role, tasks } = developer;
   return (
     <div className="developer-card">
-        <img src={developer.avatar} alt={developer.name} />
-        <h3>{developer.name}</h3>
-        <p>{developer.role}</p>
-        <p>{developer.tasks}</p>
+        <img src={avatar} alt={name} />
+        <h3>{name}</h3>
+        <p>{role}</p>
+        <p>{tasks}</p>
     </div>
   )
 };

@@ -1,12 +1,14 @@
 import { Outlet, NavLink } from "react-router-dom";
 import '../styles/App.css'
+import Header from "./components/header";
 
 function Layout() {
 
   return (
     <>
       <div>
-        <nav>
+        <Header />
+        {/* <nav>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -18,7 +20,7 @@ function Layout() {
               <NavLink to="/register">Register</NavLink>
             </li>
           </ul>
-        </nav>
+        </nav> */}
       </div>
       <main>
         <Outlet />

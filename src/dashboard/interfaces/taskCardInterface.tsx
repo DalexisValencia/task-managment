@@ -1,4 +1,4 @@
-export interface TaskCard {
+export interface TaskCardInterface {
     title: string;
     dueDate: string;
     comments: number;
