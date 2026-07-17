@@ -1,6 +1,7 @@
 import DashboardCard from "../../components/dashboardCard";
 import GreetingCard from "../../components/greetingCard";
 import TaskCard from "../../components/taskCard";
+import Filters from "../../components/filters";
 
 const Dashboard = () => {
     return (
@@ -11,6 +12,10 @@ const Dashboard = () => {
                 <button>
                     Add new Dashboard
                 </button>
+
+                <section>
+                    Filters: <Filters />
+                </section>
 
                 <section>
                     <div>
@@ -65,6 +70,10 @@ const Dashboard = () => {
                     }}>
 
                     </TaskCard>
+                </section>
+
+                <section>
+                    ALL COLLABORATORS
                 </section>
             </div>
         </section>

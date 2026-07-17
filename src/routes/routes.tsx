@@ -5,6 +5,7 @@ import Register from '../auth/pages/Register'
 import NotFound from '../errors/NotFound';
 import Layout from '../layouts/layout';
 import Dashboard from '../dashboard/pages/Dashboard';
+import TaskDetail from '../tasks/pages';
 
 export const router = createBrowserRouter([
     {
@@ -15,6 +16,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard",
                 element: <Dashboard />,
+            },
+            {
+                path: "/task-detail/:id",
+                element: <TaskDetail />,
             },
         ],
     },
